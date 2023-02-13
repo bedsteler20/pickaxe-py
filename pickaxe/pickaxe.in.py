@@ -26,7 +26,7 @@ def start_debugger():
         "request": "attach",
         "connect": {"host": "localhost", "port": 5678},
         "pathMappings": [{
-            "localRoot": os.path.join(sourceroot, 'src'),
+            "localRoot": os.path.join(sourceroot, 'pickaxe'),
             "remoteRoot": os.path.join(pkgdatadir, "pickaxe")
         }],
         "justMyCode": True,

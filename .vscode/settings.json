@@ -10,7 +10,14 @@
   "files.associations": {
     "*.wrap": "ini"
   },
-  "cSpell.words": ["dbus", "libsecrets", "Mojang", "secretstorage"],
+  "cSpell.words": [
+    "dbus",
+    "fullscreen",
+    "fullscreened",
+    "libsecrets",
+    "Mojang",
+    "secretstorage"
+  ],
   "mesonbuild.configureOnOpen": false,
   "mesonbuild.buildFolder": "_build",
   "mesonbuild.mesonPath": "/home/bedsteler20/Projects/pickaxe/.flatpak/meson.sh"

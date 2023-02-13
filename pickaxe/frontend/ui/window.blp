@@ -4,7 +4,7 @@ using Adw 1;
 template PickaxeWindow : ApplicationWindow {
   default-height: 300;
   default-width: 600;
-
+  title: "Pickaxe Launcher";
   
   [titlebar]
   HeaderBar header_bar {
@@ -26,5 +26,4 @@ menu primary_menu {
     item (_("Preferences"), "app.preferences")
     item (_("Keyboard Shortcuts"), "win.show-help-overlay")
     item (_("About Pickaxe Launcher"), "app.about")
-
 }

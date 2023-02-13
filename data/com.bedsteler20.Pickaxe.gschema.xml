@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="pickaxe">
+	<schema id="com.bedsteler20.Pickaxe" path="/com/bedsteler20/Pickaxe">
+	</schema>
+</schemalist>

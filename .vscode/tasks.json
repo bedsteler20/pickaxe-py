@@ -1,0 +1,21 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Generate Types",
+      "command": "flatpak",
+      "args": [
+        "build",
+        "--env=FAKEGIR_PATH=${workspaceFolder}/.flatpak/python-types",
+        "--env=ADD_DOCSTRINGS=1",
+        "--env=GTK_VERSION=4",
+        "${workspaceFolder}/.flatpak/repo",
+        "python",
+        "${workspaceFolder}/tools/fakegir.py"
+      ],
+      "presentation": {
+        "reveal": "always"
+      },
+    }
+  ]
+}

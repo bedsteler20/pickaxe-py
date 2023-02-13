@@ -20,7 +20,7 @@ def start_debugger():
     except ImportError:
         print("Unable to locate debugpy package can't start debugger")
         return
-    
+
     debug_options = {
         "type": "python",
         "request": "attach",
@@ -53,6 +53,7 @@ if __name__ == '__main__':
     import gi
     gi.require_version('Gtk', '4.0')
     gi.require_version('Adw', '1')
+    gi.require_version('WebKit2', '5.0')
 
     from gi.repository import Gio
     resource = Gio.Resource.load(os.path.join(

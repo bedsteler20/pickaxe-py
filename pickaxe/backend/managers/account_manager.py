@@ -1,4 +1,3 @@
-import secretstorage
 from minecraft_launcher_lib.microsoft_types import CompleteLoginResponse
 class AccountManager():
 

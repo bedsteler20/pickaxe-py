@@ -1,7 +1,8 @@
 import sys
 
 from gi.repository import Gtk, Gio
-from ..frontend.window import PickaxeWindow
+from pickaxe.frontend.dialogs.login_dialog import ms_login
+from pickaxe.frontend.window import PickaxeWindow
 
 
 class PickaxeApplication(Gtk.Application):
@@ -39,6 +40,8 @@ class PickaxeApplication(Gtk.Application):
     def on_preferences_action(self, widget, _):
         """Callback for the app.preferences action."""
         print('app.preferences action activated')
+        login_manager = ms_login(self.props.active_window)
+        login_manager.then(print)
 
     def create_action(self, name, callback, shortcuts=None):
         """Add an application action.

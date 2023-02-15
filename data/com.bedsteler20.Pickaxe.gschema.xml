@@ -3,15 +3,18 @@
 	<schema id="com.bedsteler20.Pickaxe" path="/com/bedsteler20/Pickaxe/">
 		<key name="width" type="i">
 			<default>640</default>
-		  </key>
-		  <key name="height" type="i">
+		</key>
+		<key name="height" type="i">
 			<default>480</default>
-		  </key>
-		  <key name="is-maximized" type="b">
+		</key>
+		<key name="is-maximized" type="b">
 			<default>false</default>
-		  </key>
-		  <key name="is-fullscreen" type="b">
+		</key>
+		<key name="is-fullscreen" type="b">
 			<default>false</default>
-		  </key>
+		</key>
+		<key name="accounts" type="s">
+			<default>"[]"</default>
+		</key>
 	</schema>
 </schemalist>

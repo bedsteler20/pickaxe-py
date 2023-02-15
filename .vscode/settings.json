@@ -7,6 +7,7 @@
   "python.autoComplete.extraPaths": [
     "${workspaceFolder}/.flatpak/python-types"
   ],
+  "python.analysis.extraPaths": ["${workspaceFolder}/.flatpak/python-types"],
   "files.associations": {
     "*.wrap": "ini"
   },

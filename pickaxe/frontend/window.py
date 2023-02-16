@@ -6,9 +6,11 @@ class PickaxeWindow(Gtk.ApplicationWindow):
     __gtype_name__ = 'PickaxeWindow'
 
     label = Gtk.Template.Child()
+    avatar: Adw.Avatar = Gtk.Template.Child()
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
+
         self.settings = Gio.Settings(schema_id="com.bedsteler20.Pickaxe")
 
         self.settings.bind("width", self, "default-width",

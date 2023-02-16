@@ -9,7 +9,8 @@
   ],
   "python.analysis.extraPaths": ["${workspaceFolder}/.flatpak/python-types"],
   "files.associations": {
-    "*.wrap": "ini"
+    "*.wrap": "ini",
+    "requirements-devel.txt": "pip-requirements"
   },
   "cSpell.words": [
     "dbus",

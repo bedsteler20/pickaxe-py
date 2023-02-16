@@ -25,7 +25,7 @@
     ],
     "modules" : [
         "dependencies/python3-debugpy.json",
-        "dependencies/python3-minecraft-launcher-lib.json",
+        "dependencies/python3-requirements.json",
         {
             "name" : "pickaxe",
             "builddir" : true,

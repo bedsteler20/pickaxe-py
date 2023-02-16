@@ -1,12 +1,12 @@
 import sys
 
-from gi.repository import Gtk, Gio
+from gi.repository import Gtk, Gio, Adw
 from pickaxe.backend.managers.account_manager import AccountManager
-from pickaxe.frontend.dialogs.login_dialog import ms_login
+from pickaxe.frontend.preferences_window import PickaxePreferencesWindow
 from pickaxe.frontend.window import PickaxeWindow
 
 
-class PickaxeApplication(Gtk.Application):
+class PickaxeApplication(Adw.Application):
     def __init__(self):
         super().__init__(application_id='com.bedsteler20.Pickaxe',
                          flags=Gio.ApplicationFlags.FLAGS_NONE)
@@ -34,9 +34,9 @@ class PickaxeApplication(Gtk.Application):
         about.present()
 
     def on_preferences_action(self, widget, _):
-        print('app.preferences action activated')
-        login_manager = ms_login(self.props.active_window)
-        login_manager.then(self.account_manager.add_account)
+        win = PickaxePreferencesWindow(transient_for=self.props.active_window,
+                                       account_manager=self.account_manager)
+        win.present()
 
     def create_action(self, name, callback, shortcuts=None):
         action = Gio.SimpleAction.new(name, None)

@@ -2,7 +2,7 @@ from gi.repository import Gtk, Gio, Adw
 
 
 @Gtk.Template(resource_path='/com/bedsteler20/Pickaxe/window.ui')
-class PickaxeWindow(Gtk.ApplicationWindow):
+class PickaxeWindow(Adw.ApplicationWindow):
     __gtype_name__ = 'PickaxeWindow'
 
     label = Gtk.Template.Child()

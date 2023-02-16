@@ -25,11 +25,18 @@ def start_debugger():
         "type": "python",
         "request": "attach",
         "connect": {"host": "localhost", "port": 5678},
-        "pathMappings": [{
-            "localRoot": os.path.join(sourceroot, 'pickaxe'),
-            "remoteRoot": os.path.join(pkgdatadir, "pickaxe")
-        }],
-        "justMyCode": True,
+        "pathMappings": [
+            {
+                "localRoot": os.path.join(sourceroot, 'pickaxe'),
+                "remoteRoot": os.path.join(pkgdatadir, "pickaxe"),
+            },
+            {
+                "localRoot": os.path.expanduser("~/.local/lib/python3.11/site-packages/"),
+                "remoteRoot": "/app/lib/python3.10/site-packages/"
+
+            }
+        ],
+        "justMyCode": False,
     }
 
     debugpy.listen(debug_options["connect"]["port"])

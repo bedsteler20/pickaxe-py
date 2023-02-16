@@ -37,3 +37,12 @@ if compile_schemas.found()
 endif
 
 subdir('icons')
+subdir('ui')
+
+gnome.compile_resources('pickaxe',
+  'gresource.xml',
+  gresource_bundle: true,
+  install: true,
+  install_dir: pkgdatadir,
+  dependencies: blueprints,
+)

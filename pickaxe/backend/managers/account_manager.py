@@ -14,4 +14,3 @@ class AccountManager():
     def add_account(self, account: CompleteLoginResponse):
         self.accounts.append(account)
         self.settings.set_string("accounts", json.dumps(self.accounts))
-        

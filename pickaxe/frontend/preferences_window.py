@@ -3,7 +3,7 @@ from pickaxe.backend.managers.account_manager import AccountManager
 from pickaxe.frontend.dialogs.login_dialog import LoginDialog
 
 
-@Gtk.Template(resource_path='/com/bedsteler20/Pickaxe/preferences.ui')
+@Gtk.Template.from_resource('/com/bedsteler20/Pickaxe/preferences.ui')
 class PickaxePreferencesWindow(Adw.PreferencesWindow):
     __gtype_name__ = 'PickaxePreferencesWindow'
 
@@ -13,7 +13,6 @@ class PickaxePreferencesWindow(Adw.PreferencesWindow):
     def __init__(self, account_manager: AccountManager, **kwargs):
         super().__init__(**kwargs)
         self.account_manager = account_manager
-
         self.__update_account_row()
 
         self.account_manager.subscribe(self.__update_account_row)

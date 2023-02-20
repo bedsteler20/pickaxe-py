@@ -16,13 +16,16 @@ template PickaxeWindow : Adw.ApplicationWindow {
           menu-model: primary_menu;
         }
     }
-    Gtk.Box {
-      orientation: vertical;
-      hexpand: true;
+    Gtk.ScrolledWindow {
       vexpand: true;
-      Label label {
-        label: "Hello, World!";
-        styles ["title-1"]
+      vadjustment: Gtk.Adjustment {
+        page-size: 10;
+      };
+      Gtk.FlowBox content {
+        vexpand: false;
+        row-spacing: 10;
+        column-spacing: 10;
+        // homogeneous: true;
       }
     }
   }

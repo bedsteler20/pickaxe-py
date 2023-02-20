@@ -1,12 +1,13 @@
 from gi.repository import Gtk, Gio, Adw
+from pickaxe.backend.model.instance import Instance
+from pickaxe.frontend.widgets.instance_card import InstanceCard
 
 
-@Gtk.Template(resource_path='/com/bedsteler20/Pickaxe/window.ui')
+@Gtk.Template.from_resource('/com/bedsteler20/Pickaxe/window.ui')
 class PickaxeWindow(Adw.ApplicationWindow):
     __gtype_name__ = 'PickaxeWindow'
 
-    label = Gtk.Template.Child()
-    avatar: Adw.Avatar = Gtk.Template.Child()
+    content: Gtk.FlowBox = Gtk.Template.Child()
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -21,3 +22,7 @@ class PickaxeWindow(Adw.ApplicationWindow):
                            Gio.SettingsBindFlags.DEFAULT)
         self.settings.bind("is-fullscreen", self, "fullscreened",
                            Gio.SettingsBindFlags.DEFAULT)
+
+        # for v in range(10):
+        #     instance = Instance(name="Minecraft")
+        #     self.content.append(InstanceCard(instance))

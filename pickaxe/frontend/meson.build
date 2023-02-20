@@ -4,3 +4,4 @@ install_data([
 ], install_dir: moduledir/'frontend')
 
 subdir('dialogs')
+subdir('widgets')

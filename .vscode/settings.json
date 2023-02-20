@@ -1,26 +1,22 @@
 {
-  "files.watcherExclude": {
-    "**/.dart_tool": true,
-    ".flatpak/**": true,
-    "_build/**": true
-  },
-  "python.autoComplete.extraPaths": [
-    "${workspaceFolder}/.flatpak/python-types"
-  ],
-  "python.analysis.extraPaths": ["${workspaceFolder}/.flatpak/python-types"],
-  "files.associations": {
-    "*.wrap": "ini",
-    "requirements-devel.txt": "pip-requirements"
-  },
-  "cSpell.words": [
-    "dbus",
-    "fullscreen",
-    "fullscreened",
-    "libsecrets",
-    "Mojang",
-    "secretstorage"
-  ],
-  "mesonbuild.configureOnOpen": false,
-  "mesonbuild.buildFolder": "_build",
-  "mesonbuild.mesonPath": "/home/bedsteler20/Projects/pickaxe/.flatpak/meson.sh"
+    "files.watcherExclude": {
+        "**/.dart_tool": true,
+        ".flatpak/**": true,
+        "_build/**": true
+    },
+    "files.associations": {
+        "*.wrap": "ini",
+        "requirements-devel.txt": "pip-requirements"
+    },
+    "cSpell.words": [
+        "dbus",
+        "fullscreen",
+        "fullscreened",
+        "libsecrets",
+        "Mojang",
+        "secretstorage"
+    ],
+    "mesonbuild.configureOnOpen": false,
+    "mesonbuild.buildFolder": "_build",
+    "mesonbuild.mesonPath": "/home/bedsteler20/Projects/pickaxe/.flatpak/meson.sh"
 }

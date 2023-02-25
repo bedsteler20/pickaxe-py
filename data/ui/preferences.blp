@@ -6,28 +6,22 @@ template PickaxePreferencesWindow : Adw.PreferencesWindow {
   default-height: 480;
   search-enabled: false;
   modal: true;
-    
   Adw.PreferencesPage {
     Adw.PreferencesGroup {
       title: "Accounts";
-
-      
-
       Adw.PreferencesRow {
         title: "Account";
-       
         Adw.ActionRow accounts_row {
           title: "Not logged in";
           activatable-widget: accounts_btn;
-            Button accounts_btn {
-              label: "Login";
-              margin-bottom: 7;
-              margin-top: 7;
-              styles ["pill", "suggested-action"]
-            }
-        }        
+          Button accounts_btn {
+            label: "Login";
+            margin-bottom: 7;
+            margin-top: 7;
+            styles ["pill", "suggested-action"]
+          }
+        }
       }
-
     }
   }
 }

@@ -9,7 +9,10 @@
         "requirements-devel.txt": "pip-requirements"
     },
     "cSpell.words": [
+        "accels",
         "dbus",
+        "debugpy",
+        "DEVEL",
         "fullscreen",
         "fullscreened",
         "libsecrets",

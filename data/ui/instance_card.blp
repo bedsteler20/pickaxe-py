@@ -4,9 +4,8 @@ using Adw 1;
 template InstanceCard : Gtk.FlowBoxChild {
   hexpand: false;
   vexpand: false;
-    width-request: 200;
-    height-request: 110;
-  
+  width-request: 200;
+  height-request: 110;
   Box {
     orientation: horizontal;
     Image {
@@ -14,19 +13,16 @@ template InstanceCard : Gtk.FlowBoxChild {
       height-request: 100;
       width-request: 100;
     }
-
     Box {
       orientation: vertical;
       margin-bottom: 10;
       margin-top: 10;
-
       Label name_label {
         halign: start;
         valign: start;
         vexpand: true;
         styles ["title-3"]
       }
-
       Box {
         valign: end;
         Button edit_btn {
@@ -38,7 +34,6 @@ template InstanceCard : Gtk.FlowBoxChild {
         }
       }
     }
-
     styles ["card"]
   }
 }

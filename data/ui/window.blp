@@ -5,10 +5,8 @@ template PickaxeWindow : Adw.ApplicationWindow {
   default-height: 300;
   default-width: 600;
   title: "Pickaxe Launcher";
-  
   Gtk.Box {
     orientation: vertical;
-    
     Adw.HeaderBar header_bar {
         [end]
         MenuButton {
@@ -25,14 +23,10 @@ template PickaxeWindow : Adw.ApplicationWindow {
         vexpand: false;
         row-spacing: 10;
         column-spacing: 10;
-        // homogeneous: true;
       }
     }
-  }
-
-   
+  } 
 }
-
 
 menu primary_menu {
   item (_("Preferences"), "app.preferences")

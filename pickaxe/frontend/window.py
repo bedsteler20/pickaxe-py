@@ -1,4 +1,5 @@
 from gi.repository import Gtk, Gio, Adw
+from pickaxe.backend.config import DEVEL
 from pickaxe.backend.model.instance import Instance
 from pickaxe.frontend.widgets.instance_card import InstanceCard
 

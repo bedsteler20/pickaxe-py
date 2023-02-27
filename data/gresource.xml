@@ -5,6 +5,7 @@
         <file preprocess="xml-stripblanks">instance_card.ui</file>
         <file preprocess="xml-stripblanks">preferences.ui</file>
         <file preprocess="xml-stripblanks">add_instance.ui</file>
+        <file preprocess="xml-stripblanks">vanilla_instance_creator.ui</file>
         <file preprocess="xml-stripblanks">gtk/help-overlay.ui</file>
         <file preprocess="xml-stripblanks">icons/minecraft.svg</file>
         <file preprocess="xml-stripblanks">icons/bug-symbolic.svg</file>

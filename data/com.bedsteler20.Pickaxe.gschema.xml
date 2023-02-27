@@ -16,5 +16,8 @@
         <key name="accounts" type="s">
             <default>"[]"</default>
         </key>
+        <key name="instance-location" type="s">
+            <default>"$XDG_DATA_HOME/pickaxe/instances"</default>
+        </key>
     </schema>
 </schemalist>

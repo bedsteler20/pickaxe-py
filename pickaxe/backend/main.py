@@ -13,6 +13,8 @@ class PickaxeApplication(Adw.Application):
         super().__init__(application_id='com.bedsteler20.Pickaxe',
                          flags=Gio.ApplicationFlags.FLAGS_NONE)
         self.create_action('quit', self.quit, ['<primary>q'])
+        self.create_action(
+            'add_instance', self.on_add_instance_action, ['<primary>n'])
         self.create_action('about', self.on_about_action)
         self.create_action('preferences', self.on_preferences_action)
         self.settings = Gio.Settings("com.bedsteler20.Pickaxe")
@@ -33,9 +35,6 @@ class PickaxeApplication(Adw.Application):
                                 authors=['Cameron Dehning'],
                                 copyright='© 2023 Cameron Dehning')
         about.present()
-
-    def on_quit_action(self, *args):
-        self.quit()
 
     def on_preferences_action(self, widget, _):
         win = PickaxePreferencesWindow(transient_for=self.props.active_window,

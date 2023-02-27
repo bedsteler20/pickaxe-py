@@ -1,7 +1,8 @@
 
-from dataclasses import dataclass
+
+from typing import TypedDict
 
 
-@dataclass
-class Instance():
+class Instance(TypedDict):
     name: str
+    version: str

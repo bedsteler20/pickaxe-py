@@ -3,5 +3,5 @@ install_data([
   'change_notifier.py',
   'css.py',
   'misc.py',
-  'async.py',
+  'async_utils.py',
 ], install_dir: moduledir/'backend'/'helpers')

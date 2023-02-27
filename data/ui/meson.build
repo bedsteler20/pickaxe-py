@@ -5,6 +5,7 @@ blueprints = custom_target(
         'instance_card.blp',
         'preferences.blp',
         'window.blp',
+        'vanilla_instance_creator.blp'
     ),
     output: '.',
     command: [

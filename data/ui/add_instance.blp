@@ -1,6 +1,64 @@
 using Gtk 4.0;
 using Adw 1;
 
-template AddInstanceWindow : Adw.PreferencesWindow {
-  
+template AddInstanceDialog : Adw.PreferencesWindow {
+  title: "Create Instance";
+  search-enabled: false;
+  ShortcutController {
+    Shortcut shortcut_escape {
+      trigger: "Escape";
+      action: "action(window.close)";
+    }
+  }
+  Box {
+    orientation: vertical;
+    Adw.HeaderBar {
+     show-start-title-buttons: false;
+     show-end-title-buttons: false;
+     title-widget: Label {
+       label: _("Create Instance");
+     };
+     [start]
+     Button cancel_btn {
+      label: _("Cancel");
+     }
+     [end]
+     Button create_btn {
+       sensitive: false;
+       label: _("Create");
+       styles [
+         "suggested-action",
+       ]
+     }
+    }
+    Adw.ViewStack view_stack {}
+  }
+}
+Adw.PreferencesPage main_page {
+  Adw.PreferencesGroup  {
+    Adw.ActionRow vanilla {
+      title: "Vanilla";
+      activatable: true;
+      Image {
+        icon-name: "right-large-symbolic";
+      }
+    }
+    Adw.ActionRow cursed {
+      visible: false;
+      icon-name: "curseforge-symbolic";
+      title: "Cursed Forge";
+      activatable: true;
+      Image {
+        icon-name: "right-large-symbolic";
+      }
+    }
+    Adw.ActionRow modded {
+      visible: false;
+      title: "Modded";
+      activatable: true;
+      Image {
+        icon-name: "right-large-symbolic";
+      }
+    }
+}
 }

@@ -1,0 +1,16 @@
+using Gtk 4.0;
+using Adw 1;
+
+template VanillaInstanceCreator : Adw.Bin {
+  child: Adw.PreferencesPage {
+    Adw.PreferencesGroup {
+      Adw.EntryRow name_entry {
+        title: _("Name");
+      }
+      Adw.ComboRow version_combo {
+        title: _("Version");
+        model: StringList version_model {};
+      }
+    }
+  };
+}

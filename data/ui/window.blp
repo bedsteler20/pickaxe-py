@@ -8,6 +8,11 @@ template PickaxeWindow : Adw.ApplicationWindow {
   Gtk.Box {
     orientation: vertical;
     Adw.HeaderBar header_bar {
+        [start]
+        Button {
+          icon-name: "list-add-symbolic";
+          action-name: "app.add_instance";
+        }
         [end]
         MenuButton {
           icon-name: "open-menu-symbolic";

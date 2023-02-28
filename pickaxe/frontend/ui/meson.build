@@ -16,3 +16,11 @@ blueprints = custom_target(
         '@INPUT@',
     ],
 )
+
+gnome.compile_resources('pickaxe',
+  'gresource.xml',
+  gresource_bundle: true,
+  install: true,
+  install_dir: pkgdatadir,
+  dependencies: blueprints,
+)

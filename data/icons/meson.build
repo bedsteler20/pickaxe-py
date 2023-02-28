@@ -22,3 +22,7 @@ install_data(
     join_paths(symbolic_dir, 'right-large-symbolic.svg'),
     install_dir: join_paths(get_option('datadir'), 'icons', symbolic_dir)
 )
+install_data(
+    join_paths(scalable_dir, 'minecraft.svg'),
+    install_dir: join_paths(get_option('datadir'), 'icons', scalable_dir)
+)

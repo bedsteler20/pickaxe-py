@@ -5,3 +5,4 @@ install_data([
 
 subdir('dialogs')
 subdir('widgets')
+subdir('ui')

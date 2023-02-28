@@ -3,6 +3,7 @@ import sys
 from gi.repository import Gtk, Gio, Adw
 from pickaxe.backend.helpers.misc import init_xdg_data
 from pickaxe.backend.managers.account_manager import AccountManager
+from pickaxe.backend.managers.instance_manager import InstanceManager
 from pickaxe.frontend.dialogs.add_instance_dialog import AddInstanceDialog
 from pickaxe.frontend.preferences_window import PickaxePreferencesWindow
 from pickaxe.frontend.window import PickaxeWindow
@@ -19,6 +20,7 @@ class PickaxeApplication(Adw.Application):
         self.create_action('preferences', self.on_preferences_action)
         self.settings = Gio.Settings("com.bedsteler20.Pickaxe")
         self.account_manager = AccountManager(self.settings)
+        self.instance_manager = InstanceManager()
 
     def do_activate(self):
         win = self.props.active_window
@@ -42,7 +44,8 @@ class PickaxeApplication(Adw.Application):
         win.present()
 
     def on_add_instance_action(self, *args):
-        win = AddInstanceDialog(transient_for=self.props.active_window)
+        win = AddInstanceDialog(transient_for=self.props.active_window,
+                                instance_manager=self.instance_manager)
         win.present()
 
     def create_action(self, name, callback, shortcuts=None):

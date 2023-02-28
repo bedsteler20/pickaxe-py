@@ -2,6 +2,7 @@ from gi.repository import Adw, Gtk, GObject
 from minecraft_launcher_lib.utils import get_version_list
 
 from pickaxe.backend.helpers.async_utils import async_call
+from pickaxe.backend.managers.instance_manager import InstanceManager
 
 
 @Gtk.Template.from_resource("/com/bedsteler20/Pickaxe/vanilla_instance_creator.ui")
@@ -12,9 +13,10 @@ class VanillaInstanceCreator(Adw.Bin):
     version_combo: Adw.ComboRow = Gtk.Template.Child()
     version_model: Gtk.StringList = Gtk.Template.Child()
 
-    def __init__(self, parent: GObject.GObject, **kwargs):
+    def __init__(self, parent: GObject.GObject, instance_manager: InstanceManager, **kwargs):
         super().__init__(**kwargs)
         self.parent = parent
+        self.instance_manager = instance_manager
         self.parent.create_btn.connect("clicked", self.on_create_btn)
         self.name_entry.connect("changed", self.on_name_change)
         async_call(get_version_list, self.on_has_versions)
@@ -32,6 +34,12 @@ class VanillaInstanceCreator(Adw.Bin):
 
     def on_create_btn(self, *args):
         print("Creating instance ", self.name_entry.get_text(),
-              " on version ", str(self.version_combo.get_selected_item().get_string()))
+              " on version ", self.version_combo.get_selected_item().get_string())
+        self.instance_manager.add_instance(
+            self.name_entry.get_text(),
+            self.version_combo.get_selected_item().get_string(),
+            callback= {
+                "setProgress": print
+            }
+        )
         self.parent.close()
-        

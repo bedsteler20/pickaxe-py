@@ -1,6 +1,0 @@
-data/com.bedsteler20.Pickaxe.desktop.in
-data/com.bedsteler20.Pickaxe.appdata.xml.in
-data/com.bedsteler20.Pickaxe.gschema.xml
-src/main.py
-src/window.py
-src/window.ui

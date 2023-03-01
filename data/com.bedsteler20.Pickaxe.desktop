@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=pickaxe
-Exec=pickaxe %u
-Icon=com.bedsteler20.Pickaxe
-Terminal=false
-Type=Application
-Categories=GTK;
-StartupNotify=true
-MimeType=x-scheme-handler/pickaxe-launcher;

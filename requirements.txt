@@ -1,2 +1,0 @@
-minecraft-launcher-lib==5.3
-xdg==5.1.1

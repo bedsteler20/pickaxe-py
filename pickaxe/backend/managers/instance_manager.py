@@ -6,6 +6,7 @@ from pickaxe.backend.model.instance import Instance
 from minecraft_launcher_lib import install
 from minecraft_launcher_lib.types import CallbackDict
 
+
 class InstanceManager():
     def __init__(self) -> None:
         self.conf_file = path.join(DATA_HOME, 'instances.json')
@@ -29,3 +30,9 @@ class InstanceManager():
                 open(self.conf_file, "r").read())
         except:
             self.instances = []
+
+    def has_instance(self, name: str) -> bool:
+        for i in self.instances:
+            if i["name"] == name:
+                return True
+        return False

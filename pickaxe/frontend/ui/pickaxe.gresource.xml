@@ -7,5 +7,6 @@
         <file preprocess="xml-stripblanks">add_instance.ui</file>
         <file preprocess="xml-stripblanks">vanilla_instance_creator.ui</file>
         <file preprocess="xml-stripblanks">gtk/help-overlay.ui</file>
+        <file>app_info.json</file>
     </gresource>
 </gresources>

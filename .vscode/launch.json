@@ -10,6 +10,7 @@
                 "port": 5678
             },
             "isFlatpak": true,
+            "appId": "com.bedsteler20.Pickaxe",
             "pathMappings": [
                 {
                     "localRoot": "${workspaceFolder}/pickaxe",

@@ -2,13 +2,13 @@ import json
 from minecraft_launcher_lib.microsoft_types import CompleteLoginResponse
 from gi.repository import Gio
 from pickaxe.backend.helpers.change_notifier import ChangeNotifier
-
+import inject
 
 class AccountManager(ChangeNotifier):
+    settings = Gio.Settings("com.bedsteler20.Pickaxe")
 
-    def __init__(self, settings: Gio.Settings):
+    def __init__(self):
         super().__init__()
-        self.settings = settings
 
         self.accounts: list[CompleteLoginResponse] = json.loads(
             self.settings.get_string('accounts'))

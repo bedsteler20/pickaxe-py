@@ -1,0 +1,13 @@
+{
+    "application_icon": "com.bedsteler20.Pickaxe",
+    "application_name": "Pickaxe",
+    "developer_name": "Cameron Dehning",
+    "developers": ["Cameron Dehning"],
+    "artists": ["Cameron Dehning"],
+    "designers": ["Cameron Dehning"],
+    "documenters": ["Cameron Dehning"],
+    "issue_url": "https://github.com/bedsteler20/pickaxe/issues",
+    "website": "https://github.com/bedsteler20/pickaxe",
+    "version": "0.1.0",
+    "copyright": "© 2023 Cameron Dehning"
+}

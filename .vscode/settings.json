@@ -15,6 +15,7 @@
         "DEVEL",
         "fullscreen",
         "fullscreened",
+        "gsignals",
         "libsecrets",
         "Mojang",
         "secretstorage"

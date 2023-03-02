@@ -55,6 +55,20 @@
                     "sha256": "865a7b56ed1d4cd2fce2ead1eddf97360843619757f473cd90b75f1817ca541d"
                 }
             ]
+        },
+        {
+            "name": "python3-Inject",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"Inject==4.3.1\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/23/e2/04673185baadf9f4e175de51212fd2966eed2fca3236fdcfb7e732e4d09e/Inject-4.3.1.tar.gz",
+                    "sha256": "7f996f2c9ed2082af776ddf6b528d97036898ac63040385feb1d12286a73c3cc"
+                }
+            ]
         }
     ]
 }

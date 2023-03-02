@@ -4,8 +4,8 @@ blueprints = custom_target(
         'add_instance.blp',
         'instance_card.blp',
         'preferences.blp',
+        'vanilla_instance_creator.blp',
         'window.blp',
-        'vanilla_instance_creator.blp'
     ),
     output: '.',
     command: [
@@ -17,10 +17,11 @@ blueprints = custom_target(
     ],
 )
 
-gnome.compile_resources('pickaxe',
-  'gresource.xml',
-  gresource_bundle: true,
-  install: true,
-  install_dir: pkgdatadir,
-  dependencies: blueprints,
+gnome.compile_resources(
+    'pickaxe',
+    'pickaxe.gresource.xml',
+    gresource_bundle: true,
+    install: true,
+    install_dir: pkgdatadir,
+    dependencies: blueprints,
 )

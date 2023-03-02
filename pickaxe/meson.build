@@ -1,4 +1,5 @@
 python = import('python')
+fs = import('fs')
 
 conf = configuration_data()
 conf.set('PYTHON', python.find_installation('python3').path())

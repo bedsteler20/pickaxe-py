@@ -1,9 +1,6 @@
+from pickaxe.model.base import Model
 
 
-from typing import TypedDict
-
-
-class Instance(TypedDict):
+class Instance(Model):
     name: str
     version: str
-    folder: str

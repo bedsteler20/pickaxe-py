@@ -1,7 +1,6 @@
-from gi.repository import Gtk, Gio, Adw
+from gi.repository import Gtk, Gio, Adw, GObject
 
 import inject
-from pickaxe.config import DEVEL
 from pickaxe.managers.instance_manager import InstanceManager
 from pickaxe.model.instance import Instance
 from pickaxe.widgets.instance_card import InstanceCard
@@ -26,22 +25,21 @@ class PickaxeWindow(Adw.ApplicationWindow):
                            Gio.SettingsBindFlags.DEFAULT)
         self.settings.bind("is-fullscreen", self, "fullscreened",
                            Gio.SettingsBindFlags.DEFAULT)
-        # self.selection.set_model(
-        #     self.instance_manager.instances)
+        model = Gio.ListStore()
+        for i in self.instance_manager.instances:
+            model.append(i)
+        self.selection.set_model(model)
 
     @Gtk.Template.Callback()
     def on_setup(self, factory: Gtk.SignalListItemFactory, list_item: Gtk.ListItem) -> None:
-        item: Instance = list_item.get_item()
+        """Creates the widget to be displayed but does NOT know what data the widget will contain"""
         label = Gtk.Label()
-        label.set_label(item)
         list_item.set_child(label)
 
     @Gtk.Template.Callback()
     def on_bind(self, factory: Gtk.SignalListItemFactory, list_item: Gtk.ListItem) -> None:
-        object = list_item.get_item()
-        child = list_item.get_child()
-        child.set_item(object.get_item())
-
-        # for v in range(10):
-        #     instance = Instance(name="Minecraft")
-        #     self.content.append(InstanceCard(instance))
+        """binds values in the model to the widget created in `on_setup`"""
+        child: Gtk.Label = list_item.get_child()
+        item: Instance = list_item.get_item()
+        item.bind_property('name', child, "label",
+                            GObject.BindingFlags.DEFAULT)

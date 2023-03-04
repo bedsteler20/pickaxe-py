@@ -1,7 +1,7 @@
 import sys
-
-from gi.repository import Gtk, Gio, Adw
 import inject
+
+from gi.repository import Gio, Adw
 from pickaxe.helpers.misc import init_xdg_data
 from pickaxe.managers.account_manager import AccountManager
 from pickaxe.view.about_dialog import PickaxeAboutDialog
@@ -35,7 +35,7 @@ class PickaxeApplication(Adw.Application):
         win = PickaxePreferencesWindow(transient_for=self.props.active_window)
         win.present()
 
-    def on_add_instance_action(self, *args):
+    def on_add_instance_action(self, *_):
         win = AddInstanceDialog(transient_for=self.props.active_window)
         win.present()
 

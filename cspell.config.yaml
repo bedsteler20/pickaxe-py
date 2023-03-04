@@ -1,8 +1,8 @@
 version: "0.2"
 ignorePaths:
-    - po
-    - tools
-    - subprojects
+  - po
+  - tools
+  - subprojects
 words:
   - accels
   - builddir
@@ -13,8 +13,11 @@ words:
   - FLATPAK
   - fullscreen
   - fullscreened
+  - gresource
   - gsignals
   - libsecrets
   - Mojang
   - pkgconfig
+  - pkgdatadir
   - PYOBJECT
+  - sourceroot

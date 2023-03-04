@@ -25,6 +25,7 @@ source_files = files(
     'widgets/instance_card.py',
     # model
     'model/instance.py',
+    'model/base.py',
     # managers
     'managers/account_manager.py',
     'managers/instance_manager.py',

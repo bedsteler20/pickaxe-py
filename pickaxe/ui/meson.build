@@ -1,12 +1,6 @@
 blueprints = custom_target(
     'blueprints',
-    input: files(
-        'add_instance.blp',
-        'instance_card.blp',
-        'preferences.blp',
-        'vanilla_instance_creator.blp',
-        'window.blp',
-    ),
+    input: blueprint_files,
     output: '.',
     command: [
         find_program('blueprint-compiler'),

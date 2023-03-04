@@ -1,6 +1,59 @@
 python = import('python')
 fs = import('fs')
 
+blueprint_files = files(
+    'ui/add_instance.blp',
+    'ui/instance_card.blp',
+    'ui/preferences.blp',
+    'ui/vanilla_instance_creator.blp',
+    'ui/window.blp'
+)
+
+source_files = files(
+    # pickaxe
+    '__init__.py',
+    'main.py',
+    # view
+    'view/window.py',
+    'view/preferences_window.py',
+    'view/about_dialog.py',
+    'view/login_dialog.py',
+    'view/add_instance_dialog.py',
+    'view/vanilla_instance_creator.py',
+    'view/download_tracker.py',
+    # widgets
+    'widgets/instance_card.py',
+    # model
+    'model/instance.py',
+    # managers
+    'managers/account_manager.py',
+    'managers/instance_manager.py',
+    # helpers
+    'helpers/promise.py',
+    'helpers/change_notifier.py',
+    'helpers/css.py',
+    'helpers/misc.py',
+    'helpers/async_utils.py',
+)
+
+
+configure_file(
+    input: 'config.py',
+    output: 'config.py',
+    install_dir: moduledir,
+    install: true,
+    configuration: {
+        'MS_CLIENT_ID': '3e64f2eb-2407-473d-9f15-7866700b96bb',
+        'MS_CLIENT_SECRET': 'cWI8Q~Ou6izq431lgeu6cnkxNd.D_pmy2e0SAauL'
+    },
+)
+
+install_data(
+    source_files,
+    install_dir: moduledir,
+    preserve_path: true
+)
+
 
 configure_file(
   install_dir: get_option('bindir'),
@@ -16,45 +69,4 @@ configure_file(
   },
 )
 
-install_data(
-    # pickaxe
-    '__init__.py',
-    'main.py',
-    # frountend    
-    'frontend/window.py',
-    'frontend/preferences_window.py',
-    # dialogs
-    'frontend/dialogs/about_dialog.py',
-    'frontend/dialogs/login_dialog.py',
-    'frontend/dialogs/add_instance_dialog.py',
-    'frontend/dialogs/vanilla_instance_creator.py',
-    'frontend/dialogs/download_tracker.py',
-    # widgets
-    'frontend/widgets/instance_card.py',
-    # model
-    'backend/model/instance.py',
-    # managers
-    'backend/managers/account_manager.py',
-    'backend/managers/instance_manager.py',
-    # helpers
-    'backend/helpers/promise.py',
-    'backend/helpers/change_notifier.py',
-    'backend/helpers/css.py',
-    'backend/helpers/misc.py',
-    'backend/helpers/async_utils.py',
-    install_dir: moduledir,
-    preserve_path: true
-)
-
-configure_file(
-    input: 'config.py',
-    output: 'config.py',
-    install_dir: moduledir,
-    install: true,
-    configuration: {
-        'MS_CLIENT_ID': '3e64f2eb-2407-473d-9f15-7866700b96bb',
-        'MS_CLIENT_SECRET': 'cWI8Q~Ou6izq431lgeu6cnkxNd.D_pmy2e0SAauL'
-    },
-)
-
-subdir('frontend/ui')
+subdir('ui')

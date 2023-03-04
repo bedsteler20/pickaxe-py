@@ -2,9 +2,9 @@ from gi.repository import Gtk, Gio, Adw
 
 import inject
 from pickaxe.config import DEVEL
-from pickaxe.backend.managers.instance_manager import InstanceManager
-from pickaxe.backend.model.instance import Instance
-from pickaxe.frontend.widgets.instance_card import InstanceCard
+from pickaxe.managers.instance_manager import InstanceManager
+from pickaxe.model.instance import Instance
+from pickaxe.widgets.instance_card import InstanceCard
 
 
 @Gtk.Template.from_resource('/com/bedsteler20/Pickaxe/window.ui')

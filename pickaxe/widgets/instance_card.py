@@ -1,5 +1,5 @@
 from gi.repository import Gtk
-from pickaxe.backend.model.instance import Instance
+from pickaxe.model.instance import Instance
 
 
 @Gtk.Template.from_resource('/com/bedsteler20/Pickaxe/instance_card.ui')

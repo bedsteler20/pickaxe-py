@@ -1,13 +1,13 @@
 from gi.repository import Adw, Gtk, GObject
 from minecraft_launcher_lib.utils import get_version_list
 
-from pickaxe.backend.helpers.async_utils import async_call
-from pickaxe.backend.managers.instance_manager import InstanceManager
+from pickaxe.helpers.async_utils import async_call
+from pickaxe.managers.instance_manager import InstanceManager
 from typing import TYPE_CHECKING
 import inject
 
 if TYPE_CHECKING:
-    from pickaxe.frontend.dialogs.add_instance_dialog import AddInstanceDialog
+    from pickaxe.view.add_instance_dialog import AddInstanceDialog
 
 
 @Gtk.Template.from_resource("/com/bedsteler20/Pickaxe/vanilla_instance_creator.ui")

@@ -1,8 +1,8 @@
 from os import path
 import os
 import json
-from pickaxe.backend.helpers.misc import DATA_HOME, get_instance_dir
-from pickaxe.backend.model.instance import Instance
+from pickaxe.helpers.misc import DATA_HOME, get_instance_dir
+from pickaxe.model.instance import Instance
 from minecraft_launcher_lib import install
 from minecraft_launcher_lib.types import CallbackDict
 from gi.repository import Gio
@@ -11,7 +11,7 @@ from gi.repository import Gio
 class InstanceManager():
     def __init__(self) -> None:
         self.conf_file = path.join(DATA_HOME, 'instances.json')
-        
+
         self.__load()
 
     def add_instance(self, name: str, version: str, callback: CallbackDict | None = None):

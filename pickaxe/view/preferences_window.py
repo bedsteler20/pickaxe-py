@@ -1,10 +1,12 @@
 from os import path
 from gi.repository import Gtk, Adw, Gio
-from pickaxe.backend.helpers.misc import DATA_HOME
-from pickaxe.backend.managers.account_manager import AccountManager
-from pickaxe.frontend.dialogs.login_dialog import LoginDialog
-from pickaxe.backend.helpers import css
+from pickaxe.helpers.misc import DATA_HOME
+from pickaxe.managers.account_manager import AccountManager
+from pickaxe.view.login_dialog import LoginDialog
+from pickaxe.helpers import css
 import inject
+
+
 @Gtk.Template.from_resource('/com/bedsteler20/Pickaxe/preferences.ui')
 class PickaxePreferencesWindow(Adw.PreferencesWindow):
     __gtype_name__ = 'PickaxePreferencesWindow'

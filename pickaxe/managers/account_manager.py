@@ -1,8 +1,9 @@
 import json
 from minecraft_launcher_lib.microsoft_types import CompleteLoginResponse
 from gi.repository import Gio
-from pickaxe.backend.helpers.change_notifier import ChangeNotifier
+from pickaxe.helpers.change_notifier import ChangeNotifier
 import inject
+
 
 class AccountManager(ChangeNotifier):
     settings = Gio.Settings("com.bedsteler20.Pickaxe")

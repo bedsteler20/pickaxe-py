@@ -1,6 +1,6 @@
 from gi.repository import Adw, Gtk, GObject
-from pickaxe.backend.managers.instance_manager import InstanceManager
-from pickaxe.frontend.dialogs.vanilla_instance_creator import VanillaInstanceCreator
+from pickaxe.managers.instance_manager import InstanceManager
+from pickaxe.view.vanilla_instance_creator import VanillaInstanceCreator
 
 
 @Gtk.Template.from_resource("/com/bedsteler20/Pickaxe/add_instance.ui")

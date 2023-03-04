@@ -1,30 +1,30 @@
 using Gtk 4.0;
 using Adw 1;
 
-template VanillaInstanceCreator : Adw.Bin {
+template VanillaInstanceCreator: Adw.Bin {
   child: Box {
     orientation: vertical;
     Adw.HeaderBar {
-     show-start-title-buttons: false;
-     show-end-title-buttons: false;
-     title-widget: Label {
-       label: _("Create Instance");
-     };
-     [start]
-     Button {
-      clicked => on_cancel();
-      icon-name: "go-previous-symbolic";
-      styles ["flat"]
-     }
-     [end]
-     Button create_btn {
-       sensitive: false;
-       label: _("Create");
-       clicked => on_create();
-       styles [
-         "suggested-action",
-       ]
-     }
+      show-start-title-buttons: false;
+      show-end-title-buttons: false;
+      title-widget: Label {
+        label: _("Create Instance");
+      };
+      [start]
+      Button {
+        clicked => on_cancel();
+        icon-name: "go-previous-symbolic";
+        styles["flat"]
+      }
+      [end]
+      Button create_btn {
+        sensitive: false;
+        label: _("Create");
+        clicked => on_create();
+        styles[
+          "suggested-action",
+        ]
+      }
     }
     Adw.PreferencesPage {
       Adw.PreferencesGroup {

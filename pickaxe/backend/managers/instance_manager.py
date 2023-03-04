@@ -5,11 +5,13 @@ from pickaxe.backend.helpers.misc import DATA_HOME, get_instance_dir
 from pickaxe.backend.model.instance import Instance
 from minecraft_launcher_lib import install
 from minecraft_launcher_lib.types import CallbackDict
+from gi.repository import Gio
 
 
 class InstanceManager():
     def __init__(self) -> None:
         self.conf_file = path.join(DATA_HOME, 'instances.json')
+        
         self.__load()
 
     def add_instance(self, name: str, version: str, callback: CallbackDict | None = None):
@@ -25,6 +27,7 @@ class InstanceManager():
         open(self.conf_file, "w+").write(json.dumps(self.instances))
 
     def __load(self):
+
         try:
             self.instances: list[Instance] = json.loads(
                 open(self.conf_file, "r").read())

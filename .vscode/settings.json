@@ -18,6 +18,7 @@
         "gsignals",
         "libsecrets",
         "Mojang",
+        "PYOBJECT",
         "secretstorage"
     ],
     "mesonbuild.configureOnOpen": false,

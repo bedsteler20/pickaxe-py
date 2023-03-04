@@ -1,7 +1,7 @@
 using Gtk 4.0;
 using Adw 1;
 
-template InstanceCard : Gtk.FlowBoxChild {
+template InstanceCard: Gtk.FlowBoxChild {
   hexpand: false;
   vexpand: false;
   width-request: 200;
@@ -21,7 +21,7 @@ template InstanceCard : Gtk.FlowBoxChild {
         halign: start;
         valign: start;
         vexpand: true;
-        styles ["title-3"]
+        styles["title-3"]
       }
       Box {
         valign: end;
@@ -34,6 +34,6 @@ template InstanceCard : Gtk.FlowBoxChild {
         }
       }
     }
-    styles ["card"]
+    styles["card"]
   }
 }

@@ -1,0 +1,20 @@
+version: "0.2"
+ignorePaths:
+    - po
+    - tools
+    - subprojects
+words:
+  - accels
+  - builddir
+  - buildsystem
+  - dbus
+  - debugpy
+  - DEVEL
+  - FLATPAK
+  - fullscreen
+  - fullscreened
+  - gsignals
+  - libsecrets
+  - Mojang
+  - pkgconfig
+  - PYOBJECT

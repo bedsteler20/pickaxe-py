@@ -1,14 +1,13 @@
 import sys
 
 from gi.repository import Gtk, Gio, Adw
+import inject
 from pickaxe.backend.helpers.misc import init_xdg_data
 from pickaxe.backend.managers.account_manager import AccountManager
-from pickaxe.backend.managers.instance_manager import InstanceManager
 from pickaxe.frontend.dialogs.about_dialog import PickaxeAboutDialog
 from pickaxe.frontend.dialogs.add_instance_dialog import AddInstanceDialog
 from pickaxe.frontend.preferences_window import PickaxePreferencesWindow
 from pickaxe.frontend.window import PickaxeWindow
-import inject
 
 
 class PickaxeApplication(Adw.Application):

@@ -8,19 +8,6 @@
         "*.wrap": "ini",
         "requirements-devel.txt": "pip-requirements"
     },
-    "cSpell.words": [
-        "accels",
-        "dbus",
-        "debugpy",
-        "DEVEL",
-        "fullscreen",
-        "fullscreened",
-        "gsignals",
-        "libsecrets",
-        "Mojang",
-        "PYOBJECT",
-        "secretstorage"
-    ],
     "mesonbuild.configureOnOpen": false,
     "mesonbuild.buildFolder": "_build",
     "mesonbuild.mesonPath": "/home/bedsteler20/Projects/pickaxe/.flatpak/meson.sh"

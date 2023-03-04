@@ -1,0 +1,14 @@
+{
+    "name": "python3-meson",
+    "buildsystem": "simple",
+    "build-commands": [
+        "pip3 install --verbose --ignore-installed --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"meson\" --no-build-isolation"
+    ],
+    "sources": [
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/4f/54/0e79b014d6389cba46cfd15a27e178d1bd82559142a2c66eb43b1afa8d61/meson-1.0.1-py3-none-any.whl",
+            "sha256": "98d6158c71e34dfd32c77014109003304eeda1c7e24b8e2448261dcd9d95f968"
+        }
+    ]
+}

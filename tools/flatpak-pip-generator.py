@@ -346,7 +346,7 @@ with tempfile.TemporaryDirectory(prefix=tempdir_prefix) as tempdir:
         sources[name] = {'source': source, 'vcs': is_vcs}
 
 # Python3 packages that come as part of org.freedesktop.Sdk.
-system_packages = ['cython', 'easy_install', 'mako', 'markdown', 'meson', 'pip', 'pygments', 'setuptools', 'six', 'wheel']
+system_packages = ['cython', 'easy_install', 'mako', 'markdown', 'pip', 'pygments', 'setuptools', 'six', 'wheel']
 
 fprint('Generating dependencies')
 for package in packages:

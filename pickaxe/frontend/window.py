@@ -1,6 +1,7 @@
 from gi.repository import Gtk, Gio, Adw
+
 import inject
-from pickaxe.backend.config import DEVEL
+from pickaxe.config import DEVEL
 from pickaxe.backend.managers.instance_manager import InstanceManager
 from pickaxe.backend.model.instance import Instance
 from pickaxe.frontend.widgets.instance_card import InstanceCard

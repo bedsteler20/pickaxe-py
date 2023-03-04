@@ -1,6 +1,6 @@
 from minecraft_launcher_lib import microsoft_account
 from pickaxe.backend.helpers.promise import Promise
-from pickaxe.backend.config import MS_CLIENT_ID, MS_CLIENT_SECRET, MS_REDIRECT_URL
+from pickaxe.config import MS_CLIENT_ID, MS_CLIENT_SECRET, MS_REDIRECT_URL
 from gi.repository import WebKit2, Gtk
 
 

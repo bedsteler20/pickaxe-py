@@ -35,5 +35,5 @@ if __name__ == '__main__':
         pkgdatadir, 'pickaxe.gresource'))
     resource._register()
 
-    from pickaxe.backend import main
+    from pickaxe import main
     sys.exit(main.main(VERSION))

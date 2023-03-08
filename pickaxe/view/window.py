@@ -33,13 +33,10 @@ class PickaxeWindow(Adw.ApplicationWindow):
     @Gtk.Template.Callback()
     def on_setup(self, factory: Gtk.SignalListItemFactory, list_item: Gtk.ListItem) -> None:
         """Creates the widget to be displayed but does NOT know what data the widget will contain"""
-        label = Gtk.Label()
-        list_item.set_child(label)
+
+        list_item.set_child(InstanceCard())
 
     @Gtk.Template.Callback()
     def on_bind(self, factory: Gtk.SignalListItemFactory, list_item: Gtk.ListItem) -> None:
         """binds values in the model to the widget created in `on_setup`"""
-        child: Gtk.Label = list_item.get_child()
-        item: Instance = list_item.get_item()
-        item.bind_property('name', child, "label",
-                            GObject.BindingFlags.DEFAULT)
+        list_item.get_child().bind(list_item.get_item())

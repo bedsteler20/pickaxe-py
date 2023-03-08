@@ -1,15 +1,14 @@
 using Gtk 4.0;
 using Adw 1;
 
-template InstanceCard: Gtk.FlowBoxChild {
+template InstanceCard : Adw.Bin {
   hexpand: false;
   vexpand: false;
   width-request: 200;
   height-request: 110;
   Box {
     orientation: horizontal;
-    Image {
-      resource: "/com/bedsteler20/Pickaxe/icons/minecraft.svg";
+    Image image {
       height-request: 100;
       width-request: 100;
     }
@@ -21,7 +20,7 @@ template InstanceCard: Gtk.FlowBoxChild {
         halign: start;
         valign: start;
         vexpand: true;
-        styles["title-3"]
+        styles ["title-3"]
       }
       Box {
         valign: end;
@@ -34,6 +33,6 @@ template InstanceCard: Gtk.FlowBoxChild {
         }
       }
     }
-    styles["card"]
+    styles ["card"]
   }
 }

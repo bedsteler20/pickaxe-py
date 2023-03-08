@@ -1,7 +1,7 @@
 using Gtk 4.0;
 using Adw 1;
 
-template AddInstanceDialog: Adw.PreferencesWindow {
+template AddInstanceDialog : Adw.PreferencesWindow {
   title: "Create Instance";
   search-enabled: false;
   ShortcutController {
@@ -28,7 +28,7 @@ Box main_page {
     Button create_btn {
       sensitive: false;
       label: _("Create");
-      styles[
+      styles [
         "suggested-action",
       ]
     }

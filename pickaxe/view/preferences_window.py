@@ -3,7 +3,7 @@ from gi.repository import Gtk, Adw, Gio
 from pickaxe.helpers.misc import DATA_HOME
 from pickaxe.managers.account_manager import AccountManager
 from pickaxe.view.login_dialog import LoginDialog
-from pickaxe.helpers import css
+from pickaxe.helpers.css import css
 import inject
 
 

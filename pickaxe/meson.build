@@ -6,7 +6,8 @@ blueprint_files = files(
     'ui/instance_card.blp',
     'ui/preferences.blp',
     'ui/vanilla_instance_creator.blp',
-    'ui/window.blp'
+    'ui/window.blp',
+    'ui/help_overlay.blp'
 )
 
 source_files = files(
